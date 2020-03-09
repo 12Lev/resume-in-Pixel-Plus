@@ -1,0 +1,351 @@
+<!--
+Постарался многое сделать плавненько и отзывчиво.
+На данную работу ушло 12 часов 30 минут, основное время ушло на настройку слайдера.
+Старался все сделать по Pixel Perfect, но имеются некоторые расхождения
+Центральный блок контента, а именно переключалки, сделал с помощью input radio и label, сам контент не стал к ним привязывать.
+
+Сайт проверил на валидаторе.
+
+Если имеются недочеты (а они, думаю, имеются), то прошу сообщить, что бы исправить.
+
+Спасибо за предоставленную возможность!
+
+Так же есть навыки в создании простой сборки в Gulp.
+Есть навыки с GIT.
+Есть теоретическое понимание работы с SASS.
+Нужно больше практики.
+-->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Тестовое задание Пиксель Плюс - Брюзгин Лев</title>
+  <link rel="stylesheet" type="text/css" href="src/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="src/css/slider/swiper.css">
+  <link rel="stylesheet" type="text/css" href="src/css/slider/swiper.min.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header__wrapper wrapper">
+      <img src="src/img/header-logo.png" alt="The best company" class="header__logo">
+
+      <!-- Если щелкнуть по телефону, то устройство наберет указанный номер -->
+      <div class="header__contacts top-contacts">
+        <a href="tel:+74997777777" class="top-contacts__phone">+7(499)777-77-77</a>
+        <a href="tel:+74997777777" class="top-contacts__phone">+7(499)777-77-77</a>
+        <a href="#" class="top-contacts__order">Обратная связь</a>
+      </div>
+    </div>
+  </header>
+  <nav class="top-menu">
+    <div class="top-menu__wrapper wrapper">
+      <ul class="top-menu__list">
+        <li class="top-menu__item">
+          <a href="#" class="top-menu__link">Главная</a>
+        </li>
+        <li class="top-menu__item">
+          <a href="#" class="top-menu__link">Каталог</a>
+        </li>
+        <li class="top-menu__item">
+          <a href="#" class="top-menu__link">Доставка&nbsp;и&nbsp;оплата</a>
+        </li>
+        <li class="top-menu__item">
+          <a href="#" class="top-menu__link">Прайс-лист</a>
+        </li>
+        <li class="top-menu__item">
+          <a href="#" class="top-menu__link">Контакты</a>
+        </li>
+      </ul> 
+    </div>
+  </nav>
+  <main class="central-container">
+    <!-- Реализовал слайдер с помощью Swiper.js, т.к. пока знаю такой способ-->
+    <div class="slider">
+      <div class="swiper-container">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="src/img/slide-1.jpg" alt="slide-1" class="slide-1">
+              </div>
+              <div class="swiper-slide">
+                <img src="src/img/slide-2.jpg" alt="slide-2" class="slide-1">
+              </div>
+          </div>
+      </div>
+      <div class="slider__btn">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+    <!-- На данном этапе работы путь отображается в виде текста -->
+    <div class="content">
+      <div class="content__wrapper wrapper">
+        <div class="content__way way">
+          <ul class="way__list">
+            <li class="way__item">
+              <a href="#" class="way__link">Главная</a>
+            </li>
+            <li class="way__item">
+              <a href="#" class="way__link">Каталог</a>
+            </li>
+            <li class="way__item">
+              <a href="#" class="way__link">Бытовая техника</a>
+            </li>
+          </ul>
+        </div>
+        <div class="content__block">
+          <!-- Меню контента сделал раскрывающимся, с помощью JQ -->
+          <div class="content__leftblock content-menu">
+            <ul class="content-menu__list">
+              <li class="content-menu__item">
+                <span class="content-menu__title">Автомобили</span>
+                <ul class="content-menu__sublist">
+                  <li class="content-menu__subitem">
+                    <a href="#" class="content-menu__link">AUDI</a>
+                  </li>
+                  <li class="content-menu__subitem">
+                    <a href="#" class="content-menu__link">SUBARU</a>
+                  </li>
+                  <li class="content-menu__subitem">
+                    <a href="#" class="content-menu__link">LADA</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="content-menu__item">
+                <span class="content-menu__title">Бытовая техника</span>
+                <ul class="content-menu__sublist">
+                  <li class="content-menu__subitem">
+                    <a href="#" class="content-menu__link">Микроволновки</a>
+                  </li>
+                  <li class="content-menu__subitem">
+                    <a href="#" class="content-menu__link">Холодильники</a>
+                  </li>
+                  <li class="content-menu__subitem">
+                    <a href="#" class="content-menu__link">Посудомоичные машины</a>
+                  </li>
+                  <li class="content-menu__subitem">
+                    <a href="#" class="content-menu__link">Чайники</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="content-menu__item">
+                <span class="content-menu__title">Мобильная техника</span>
+                <ul class="content-menu__sublist">
+                  <li class="content-menu__subitem">
+                    <a href="#" class="content-menu__link">Телефоны</a>
+                  </li>
+                  <li class="content-menu__subitem">
+                    <a href="#" class="content-menu__link">Зарядки</a>
+                  </li>
+                  <li class="content-menu__subitem">
+                    <a href="#" class="content-menu__link">Чехлы</a>
+                  </li>
+                  <li class="content-menu__subitem">
+                    <a href="#" class="content-menu__link">Батарейки</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="content-menu__item">
+                <span class="content-menu__title">Компьютеры</span>
+                <ul class="content-menu__sublist">
+                  <li class="content-menu__subitem">
+                    <a href="#" class="content-menu__link">Системные блоки</a>
+                  </li>
+                  <li class="content-menu__subitem">
+                    <a href="#" class="content-menu__link">Ноутбуки</a>
+                  </li>
+                  <li class="content-menu__subitem">
+                    <a href="#" class="content-menu__link">Запчасти</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="content-menu__item">
+                <span class="content-menu__title">Одежда</span>
+                <ul class="content-menu__sublist">
+                  <li class="content-menu__subitem">
+                    <a href="#" class="content-menu__link">Свитера</a>
+                  </li>
+                  <li class="content-menu__subitem">
+                    <a href="#" class="content-menu__link">Рубашки</a>
+                  </li>
+                  <li class="content-menu__subitem">
+                    <a href="#" class="content-menu__link">Брюки</a>
+                  </li>
+                  <li class="content-menu__subitem">
+                    <a href="#" class="content-menu__link">Аксессуары</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="content-menu__item">
+                <span class="content-menu__title">Недвижимость</span>
+                <ul class="content-menu__sublist">
+                  <li class="content-menu__subitem">
+                    <a href="#" class="content-menu__link">Квартиры</a>
+                  </li>
+                  <li class="content-menu__subitem">
+                    <a href="#" class="content-menu__link">Дома</a>
+                  </li>
+                  <li class="content-menu__subitem">
+                    <a href="#" class="content-menu__link">Участки</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <a href="#" class="download-price">
+              <img src="src/img/price.jpg" alt="price" class="download-price__img">
+            </a>
+          </div>
+
+          <!-- При добавлении или удалении продукта блок остается в рамках. -->
+          <div class="content__centerblock product">
+            <ul class="product__list">
+              <li class="product__item">
+                <img class="product__img" src="src/img/nophoto.jpg" alt="nophoto">
+                <h4 class="product__title h">
+                  Самый клевый чайник, который надо купить!
+                </h4>
+                <div class="product__price-block">
+                  <span class="product__price">1 900 р.</span>
+                  <button class="product_basket"></button>
+                </div>
+              </li>
+              <li class="product__item">
+                <img class="product__img" src="src/img/nophoto.jpg" alt="nophoto">
+                <h4 class="product__title h">
+                  Самый клевый чайник, который надо купить!
+                </h4>
+                <div class="product__price-block">
+                  <span class="product__price">1 900 р.</span>
+                  <button class="product_basket"></button>
+                </div>
+              </li>
+              <li class="product__item">
+                <img class="product__img" src="src/img/nophoto.jpg" alt="nophoto">
+                <h4 class="product__title h">
+                  Самый клевый чайник, который надо купить!
+                </h4>
+                <div class="product__price-block">
+                  <span class="product__price">1 900 р.</span>
+                  <button class="product_basket"></button>
+                </div>
+              </li>
+              <li class="product__item">
+                <img class="product__img" src="src/img/nophoto.jpg" alt="nophoto">
+                <h4 class="product__title h">
+                  Самый клевый чайник, который надо купить!
+                </h4>
+                <div class="product__price-block">
+                  <span class="product__price">1 900 р.</span>
+                  <button class="product_basket"></button>
+                </div>
+              </li>
+              <li class="product__item">
+                <img class="product__img" src="src/img/nophoto.jpg" alt="nophoto">
+                <h4 class="product__title h">
+                  Самый клевый чайник, который надо купить!
+                </h4>
+                <div class="product__price-block">
+                  <span class="product__price">1 900 р.</span>
+                  <button class="product_basket"></button>
+                </div>
+              </li>
+            </ul>
+            <div class="content__page page"> 
+              <input type="radio" name="page" class="i-page" id="i-page-1" checked="checked" />
+              <input type="radio" name="page" class="i-page" id="i-page-2" />
+              <input type="radio" name="page" class="i-page" id="i-page-3" />
+              <input type="radio" name="page" class="i-page" id="i-page-4" />
+              <input type="radio" name="page" class="i-page" id="i-page-5" />
+              <input type="radio" name="page" class="i-page" id="i-page-6" />
+              <input type="radio" name="page" class="i-page" id="i-page-7" />
+              <input type="radio" name="page" class="i-page" id="i-page-8" />
+              <label class="l-page l-page--1" for="i-page-1">
+                1
+              </label>
+              <label class="l-page l-page--2" for="i-page-2">
+                2
+              </label>
+              <label class="l-page l-page--3" for="i-page-3">
+                3
+              </label>
+              <label class="l-page l-page--4" for="i-page-4">
+                4
+              </label>
+              <label class="l-page l-page--5" for="i-page-5">
+                5
+              </label>
+              <label class="l-page l-page--6" for="i-page-6">
+                6
+              </label>
+              <label class="l-page l-page--7" for="i-page-7">
+                7
+              </label>
+            </div>
+
+            <!-- В разделе description сплошной текст разбил с помощью свойства CSS Columns, так прикрепил неразрывные пробелы к частицам, что бы они переносились со словами. -->
+            <div class="description">
+              Компания «Пиксель Плюс» существует более 6&nbsp;лет, за это время мы принимали участие в&nbsp;разработке более чем 700&nbsp;сайтов, поэтому можем уверенно называть себя профессионалами. На данный момент наш коллектив состоит из более чем 30&nbsp;сотрудников работающих в&nbsp;двух офисах в&nbsp;Москве и&nbsp;Зеленограде.характерные для этого жанра мотивы: неразделённой любви, ухода молодости, угасания души. 
+              Одним из основных направлений работ нашей компании является поисковое продвижение сайтов, на данной момент мы работаем с&nbsp;более чем 150&nbsp;постоянными клиентами по более чем 11&nbsp;000&nbsp;поисковым запросам. При этом в&nbsp;работе основной акцет мы делаем на качестве работ, а&nbsp;так&nbsp;же применяем собсвенные уникальные разработки в области SEO gродвижения. На&nbsp;данный момент отдел SEO состоит из 9&nbsp;человек под руководством ведущего специалиста, преимущественно работающих в &nbsp;нашем московском офисе. 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer" id="footer">
+    <div class="footer__wrapper wrapper">
+      <div class="footer__copy copy">
+        <div class="copy__text">
+          &copy; 2012-2013 ЗАО «Компания»
+        </div>
+        <a href="mailto:info@name.ru" class="copy__link">info@name.ru</a>  
+      </div>
+      <ul class="footer__menu lower-menu">
+        <li class="lower-menu__item">
+          <a href="#" class="lower-menu__link">Главная</a>
+        </li>
+        <li class="lower-menu__item">
+          <a href="#" class="lower-menu__link">Каталог</a>
+        </li>
+        <li class="lower-menu__item">
+          <a href="#" class="lower-menu__link">Доставка и оплата</a>
+        </li>
+        <li class="lower-menu__item">
+          <a href="#" class="lower-menu__link">Прайс-лист</a>
+        </li>
+        <li class="lower-menu__item">
+          <a href="#" class="lower-menu__link">Контакты</a>
+        </li>
+      </ul>
+      <div class="footer__order order-footer">
+        <a href="#" class="order-footer__link">Разработка сайта</a> - <br>компания "Пиксель Плюс"
+      </div>
+    </div>
+  </footer>
+
+  <!-- Всплывающее окно не удалось реализовать в полном объеме, а именно fade effect и стилизованное оформление незаполненного поля -->
+  <div class="feedback">
+    <form class="feedback__container">
+      <button class="feedback__close"></button>
+      <h2 class="feedback__title h">Обратная связь</h2>
+      <span class="feedback__subtitle">Введите имя *</span>
+      <input class="i-feedback__name i-feedback" type="text" name="name" required="required" />
+      <span class="feedback__subtitle">Телефон *</span>
+      <input class="i-feedback__phone i-feedback" type="text" name="phone" required="required" />
+      <span class="feedback__subtitle">Email *</span>
+      <input class="i-feedback__email i-feedback" type="email" name="email" required="required" />
+      <span class="feedback__subtitle">Сообщение *</span>
+      <input class="i-feedback__info i-feedback" type="text" name="info" />
+      <button class="feedback__button">
+        Отправить
+      </button>
+    </form>
+  </div>
+  <script src="src/js/jquery-3.4.1.min.js"></script>
+  <script src="src/js/slider/swiper.js"></script>
+  <script src="src/js/slider/swiper.min.js"></script>
+  <script src="src/js/script.js"></script>
+</body>
+</html>
